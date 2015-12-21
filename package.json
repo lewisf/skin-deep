@@ -5,7 +5,9 @@
   "main": "skin-deep.js",
   "scripts": {
     "test": "mocha",
-    "travis": "istanbul cover _mocha --"
+    "travis": "istanbul cover _mocha --",
+    "build:umd": "webpack ./skin-deep.js built/skin-deep.js --config webpack.config.development.js",
+    "build:umd:min": "webpack ./skin-deep.js built/skin-deep.js --config webpack.config.production.js"
   },
   "repository": {
     "type": "git",
@@ -38,6 +40,7 @@
     "react": "^0.14.0",
     "react-addons-create-fragment": "^0.14.0",
     "react-addons-test-utils": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "webpack": "^1.12.9"
   }
 }
